@@ -1,9 +1,29 @@
 body{
+    font-family: inter, sans-serif;
+}
+
+#canvas{
     height: 95vh;
     width: 95;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: rgb(44, 139, 44);
+    color: rgb(47, 88, 47);
+}
+
+.night-mode{
+    display: block;
+    background: transparent;
+    border: none !important;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.night-mode span{
+    display: block;
+    width: 45px;
+    text-align: left;
 }
