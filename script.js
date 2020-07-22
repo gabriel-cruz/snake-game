@@ -38,6 +38,17 @@ function update(event){
     if(event.keyCode == 40 && direction != 'up') direction = 'down';
 }
 
+function backgroundColor(){
+    var color = document.getElementById('body');
+
+    if(color.className == 'white'){
+        color.className = 'dark';
+    }
+    else{
+        color.className = 'white';
+    }
+}
+
 function startGame(){
     if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
