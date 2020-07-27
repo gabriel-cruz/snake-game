@@ -2,6 +2,16 @@ body{
     font-family: inter, sans-serif;
 }
 
+p{
+    color: red;
+    font-weight: bold;
+}
+
+#gameOver{
+    color: black;
+    position: absolute;
+}
+
 #canvas{
     height: 95vh;
     width: 95;
@@ -9,7 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: rgb(47, 88, 47);
+    color: rgb(59, 180, 180);
 }
 
 .night-mode{

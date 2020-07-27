@@ -1,6 +1,7 @@
 let canvas = document.getElementById("snake"); //atribui o canvas do html ao script js
 let context = canvas.getContext("2d"); //define o contexto do canvas para 2d
 let box = 32; //tamanho da caixa
+let points = 1;
 let snake = [];
 snake [0] = {
     x: 8 * box,
@@ -38,6 +39,7 @@ function update(event){
     if(event.keyCode == 40 && direction != 'up') direction = 'down';
 }
 
+
 function backgroundColor(){
     var color = document.getElementById('body');
 
@@ -58,7 +60,7 @@ function startGame(){
     for (i = 1; i < snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(game);
-            alert('Game Over :(');
+            document.getElementById("gameOver").innerHTML = "GAME OVER :(";
         }
     }
 
@@ -80,7 +82,10 @@ function startGame(){
     else{
         food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
+
+        document.getElementById("points").innerHTML = "Pontuação: " + points++;
     }
+
     
     let newHead = {
         x: snakeX,
